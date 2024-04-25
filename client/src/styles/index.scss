@@ -3,6 +3,7 @@
 @import "./Header.scss";
 @import "./Footer.scss";
 @import "./SurveyForm.scss";
+@import "./PriceSlider.scss";
 
 @import "./fonts.scss";
 @import "./color.scss";
@@ -25,6 +26,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {

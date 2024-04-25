@@ -2,4 +2,22 @@
     width: 100%;
     min-height:1000px;
     background-color: white;
+    padding: 20px 0px;
+
+    &_content {
+        display: flex;
+        justify-content: space-evenly;
+        align-content: flex-start;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+
+        &_left_column {
+            width: 500px;
+        }
+
+        &_right_column {
+            width: 500px;
+        }
+    }
 }

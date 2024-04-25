@@ -4,6 +4,11 @@ import Footer from "./Footer";
 import SurveyList from "./SurveyList";
 
 import { PropTypes } from "prop-types";
+import PriceSlider from "./PriceSlider";
+import AdvancedConditions from "./AdvancedConditions";
+import ScrollToTopButton from "./ScrollToTopButton";
+
+
 const MainPage = ({ itemArr }) => {
   return (
     <>
@@ -11,10 +16,18 @@ const MainPage = ({ itemArr }) => {
         <Header />
         <div className="main_page">
           <div className="container">
-            <p>бим бим бам бам</p>
-            <SurveyList itemArr={itemArr} />
+            <div className="main_page_content">
+              <div className="main_page_content_left_column">
+                <SurveyList itemArr={itemArr} />
+              </div>
+              <div className="main_page_content_right_column">
+                <PriceSlider />
+                <AdvancedConditions/>
+              </div>
+            </div>
           </div>
         </div>
+        <ScrollToTopButton />
         <Footer />
       </div>
     </>

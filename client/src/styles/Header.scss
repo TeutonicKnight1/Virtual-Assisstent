@@ -2,8 +2,18 @@
   height: 150px;
   color: white;
 
-    &_title {
-        margin-top:10px;
-        font-size: 40px;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &_title {
+    margin-top: 10px;
+    font-size: 40px;
+    text-align: "center";
+  }
+
+  &_signin_button {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

@@ -1,15 +1,17 @@
 import { PropTypes } from "prop-types";
+import { useDispatch } from "react-redux";
 
 import { nextStep } from "../store/surveySlice";
-import { useDispatch, useSelector } from "react-redux";
+
+import { FormControlLabel, FormLabel, Radio, RadioGroup } from "@mui/material";
 
 
-const SurveyForm = ({id, question, answers, isActive}) => {
+const SurveyForm = ({ id, question, answers, isActive }) => {
   const dispatch = useDispatch();
   //const { isActiveState } = useSelector((state) => state.survey.itemArr[id].isActive);
   //const data = itemArr[id];
-//   const [resultQuestion, setResultQuestion] = useState({});
-//   const [answersState, setAnswersState] = useState(answers);
+  //const [resultQuestion, setResultQuestion] = useState({});
+  //const [answersState, setAnswersState] = useState(answers);
 
   const handleChange = () => {
     dispatch(nextStep(id));
@@ -17,25 +19,17 @@ const SurveyForm = ({id, question, answers, isActive}) => {
 
   return (
     <>
-      <form className={isActive ? "form" : " form display_none"}>
-        <h3>{question}</h3>
-        <ul className="ul">
+      <form className={isActive ? "survey_form" : "display_none survey_form"}>
+        <FormLabel id="demo-radio-buttons-group-label" sx={{ fontSize: "1.2rem" }}>{question}</FormLabel>
+        <RadioGroup
+          aria-labelledby="demo-radio-buttons-group-label"
+          defaultValue="female"
+          name="radio-buttons-group"
+        >
           {answers.map((element) => (
-            <li key={element.id} className="li">
-              <label key={element.id} className="label">
-                <input
-                  id={element.id}
-                  type="radio"
-                  name="question"
-                  className="radio"
-                  value={element.number}
-                  onClick={handleChange}
-                />
-                <span>{element.item}</span>
-              </label>
-            </li>
+              <FormControlLabel key={element.id} value={element.item} control={<Radio size="small"/>} label={element.item} onClick={handleChange}/>
           ))}
-        </ul>
+        </RadioGroup>
       </form>
     </>
   );

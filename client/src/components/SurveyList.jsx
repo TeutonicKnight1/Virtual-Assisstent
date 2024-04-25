@@ -1,16 +1,23 @@
 import SurveyForm from "./SurveyForm";
 
 import { PropTypes } from "prop-types";
+import { Button } from "@mui/material";
 
 const SurveyList = ({ itemArr }) => {
   return (
     <>
       <div className="survey_list">
         {itemArr.map((element) => (
-          <SurveyForm key={element.question} id={element.id} question={element.question} answers={element.answers} isActive={element.isActive} />
+          <SurveyForm
+            key={element.question}
+            id={element.id}
+            question={element.question}
+            answers={element.answers}
+            isActive={element.isActive}
+          />
         ))}
+        <Button variant="contained" size="large" sx={{ marginTop: "20px" }}>Посоветовать</Button>
       </div>
-      <button type="button" className="submitForm">Посоветовать</button>
     </>
   );
 };
