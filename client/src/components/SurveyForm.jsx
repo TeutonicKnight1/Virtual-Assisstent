@@ -8,8 +8,6 @@ import { FormControlLabel, FormLabel, Radio, RadioGroup } from "@mui/material";
 
 const SurveyForm = ({ id, question, answers, isActive }) => {
   const dispatch = useDispatch();
-  //const { isActiveState } = useSelector((state) => state.survey.itemArr[id].isActive);
-  //const data = itemArr[id];
   //const [resultQuestion, setResultQuestion] = useState({});
   //const [answersState, setAnswersState] = useState(answers);
 
@@ -18,8 +16,8 @@ const SurveyForm = ({ id, question, answers, isActive }) => {
   };
 
   return (
-    <>
-      <form className={isActive ? "survey_form" : "display_none survey_form"}>
+    <div className="overflow_parent_block">
+      <form className={isActive ? "show" : "display_none"}>
         <FormLabel id="demo-radio-buttons-group-label" sx={{ fontSize: "1.2rem" }}>{question}</FormLabel>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
@@ -31,7 +29,7 @@ const SurveyForm = ({ id, question, answers, isActive }) => {
           ))}
         </RadioGroup>
       </form>
-    </>
+    </div>
   );
 };
 

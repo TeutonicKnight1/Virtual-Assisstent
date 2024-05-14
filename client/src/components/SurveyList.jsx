@@ -2,12 +2,15 @@ import SurveyForm from "./SurveyForm";
 
 import { PropTypes } from "prop-types";
 import { Button } from "@mui/material";
+import { useSelector } from "react-redux";
 
-const SurveyList = ({ itemArr }) => {
+const SurveyList = () => {
+  const data = useSelector((state) => state.survey.itemArr);
+
   return (
     <>
       <div className="survey_list">
-        {itemArr.map((element) => (
+        {data.map((element) => (
           <SurveyForm
             key={element.question}
             id={element.id}

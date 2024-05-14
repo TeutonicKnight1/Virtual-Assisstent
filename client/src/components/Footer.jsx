@@ -20,7 +20,7 @@ const Footer = () => {
           </Link>
         </Container>
       </Container>
-      <Typography variant="inherit" color="white" sx={{display: "flex", justifyContent: "center", marginTop: "130px"}}>
+      <Typography variant="inherit" color="white" sx={{display: "flex", justifyContent: "center", marginTop: "40px"}}>
         © 2024. Все права защищены.
       </Typography>
     </footer>

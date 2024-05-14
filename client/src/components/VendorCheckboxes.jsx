@@ -116,41 +116,6 @@ const VendorCheckboxes = () => {
             label="ASUS"
           />
         </FormGroup>
-        {/* <FormGroup>
-          <FormControlLabel
-            control={
-              <Checkbox
-                sx={{ color: "black" }}
-                onChange={handleChange}
-                name="gilad"
-                size="small"
-              />
-            }
-            label="GIGABYTE"
-          />
-          <FormControlLabel
-            control={
-              <Checkbox
-                sx={{ color: "black" }}
-                onChange={handleChange}
-                name="jason"
-                size="small"
-              />
-            }
-            label="MSI"
-          />
-          <FormControlLabel
-            control={
-              <Checkbox
-                sx={{ color: "black" }}
-                onChange={handleChange}
-                name="antoine"
-                size="small"
-              />
-            }
-            label="ASUS"
-          />
-        </FormGroup> */}
       </div>
     </>
   );
